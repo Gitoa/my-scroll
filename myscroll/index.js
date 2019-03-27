@@ -57,7 +57,10 @@ export default function MyScroll (el, options) {
   this.scrollEl.addEventListener('touchstart', function(e) {
     _this._touchstart(e)
   }, false)
-  
+  this.scrollEl.addEventListener('touchmove', function(e) {
+    console.log(e.target)
+    console.log('touchmove')
+  }, false)
   this.scrollEl.addEventListener('touchend', function(e) {
     console.log(e.target)
     console.log('touchend')
